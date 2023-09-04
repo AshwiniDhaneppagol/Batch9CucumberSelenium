@@ -9,6 +9,7 @@ public class LoginStepDef {
     @Given("The user is on the login page")
     public void the_user_is_on_the_login_page() {
         System.out.println("I open the browser and navigate to login page");
+
     }
     @When("The user enters teacher credentials")
     public void the_user_enters_teacher_credentials() {

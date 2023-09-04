@@ -20,7 +20,7 @@ Feature:  Eurotech Login Tests
     #Then is our verification part
     Then The user should be able to login
 
-    @Developer @smoke @wip
+    @Developer @smoke
     Scenario: Login as Developer
       Given The user is on the login page
       When The user enters developer credentials
