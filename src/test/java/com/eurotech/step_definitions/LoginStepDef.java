@@ -23,5 +23,10 @@ public class LoginStepDef {
     public void theUserEntersStudentCredentials() {
         System.out.println("I enter student username and password and click login button");
     }
+    @When("The user enters developer credentials")
+    public void the_user_enters_developer_credentials() {
+        System.out.println("I enter developer username and password and click login button");
+    }
+
 
 }
