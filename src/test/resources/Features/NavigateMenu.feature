@@ -1,7 +1,8 @@
+
 Feature: Navigate Menu
 
 
-  @db @wip
+   @wip
   Scenario: Navigate Developers Menu
     Given The user is on the login page
     When The user enters teacher credentials
@@ -15,7 +16,7 @@ Feature: Navigate Menu
       Then  The user should be able to see welcome message
       And   The user navigates to All Posts menu
       Then  The user able to see All Posts title
-  @wip @db
+  @wip
       Scenario: Navigate My Account Menu
         Given The user is on the login page
         When The user enters teacher credentials
