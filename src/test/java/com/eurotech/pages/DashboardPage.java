@@ -48,5 +48,8 @@ public class DashboardPage extends BasePage {
     }
 
 
+    public String  getHeader(String headerName){
+    return Driver.get().findElement(By.xpath("//h1[text()='"+headerName+"']")).getText();
+    }
 
 }

@@ -1,15 +1,15 @@
-@login
+
 Feature:  Eurotech Login Tests
 
   # Agile story :As a user I should be able to login with valid credentials.
 
-  @Teacher  @smoke
+  @Teacher  @smoke @login
   Scenario: Login As Teacher
     Given The user is on the login page
     When The user enters teacher credentials
     Then The user should be able to login
 
-  @Student   @smoke
+  @Student   @smoke @login
   Scenario: Login As Student
     #Pre condition
     Given The user is on the login page

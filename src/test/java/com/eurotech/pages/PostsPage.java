@@ -1,8 +1,9 @@
 package com.eurotech.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
+
 
 public class PostsPage extends BasePage{
 
@@ -23,6 +24,8 @@ public class PostsPage extends BasePage{
         postInput.sendKeys(postText);
         submitButton.click();
         Assert.assertEquals(postCreatedMessage.getText(), "Post Created", "Verifying whether the post is created successfully");
+
+
     }
 
 }
