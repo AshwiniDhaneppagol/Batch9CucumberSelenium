@@ -70,4 +70,11 @@ public class LoginPage extends BasePage {
         passwordInput.sendKeys(ConfigurationReader.get("passwordTeacher"));
         loginBtn.click();
     }
+
+    public void loginWithDeveloper() {
+        understandBtn.click();
+        usernameInput.sendKeys(ConfigurationReader.get("usernameDeveloper"));
+        passwordInput.sendKeys(ConfigurationReader.get("passwordDeveloper"));
+        loginBtn.click();
+    }
 }

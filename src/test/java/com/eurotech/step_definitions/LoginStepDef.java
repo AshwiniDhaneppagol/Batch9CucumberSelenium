@@ -9,6 +9,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.Map;
+
 public class LoginStepDef {
 
     LoginPage loginPage = new LoginPage();
@@ -41,6 +43,7 @@ public class LoginStepDef {
     @When("The user enters developer credentials")
     public void the_user_enters_developer_credentials() {
         System.out.println("I enter developer username and password and click login button");
+        loginPage.loginWithDeveloper();
     }
 
     @When("The user logs in using {string} and {string}")
@@ -58,4 +61,15 @@ public class LoginStepDef {
        // Assert.assertTrue(dashboardPage.welcomeMessage.getText().contains(welcomeMessage));
         Assert.assertEquals(welcomeMessage,dashboardPage.welcomeMessage.getText());
     }
+
+    @When("The user logs in using following credentials")
+    public void the_user_logs_in_using_following_credentials(Map<String, String> userCredentials) {
+        System.out.println("User Credentials: " + userCredentials);
+
+        String username = userCredentials.get("username");
+        String password = userCredentials.get("password");
+
+        loginPage.login(username, password);
+    }
+
 }
