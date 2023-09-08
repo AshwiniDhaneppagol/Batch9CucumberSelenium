@@ -1,30 +1,28 @@
-
 Feature:  Eurotech Login Tests
 
   # Agile story :As a user I should be able to login with valid credentials.
 
+  Background:
+    Given The user is on the login page
+
   @Teacher  @smoke @login
   Scenario: Login As Teacher
-    Given The user is on the login page
+#    Given The user is on the login page
     When The user enters teacher credentials
     Then The user should be able to login
 
   @Student   @smoke @login
   Scenario: Login As Student
-    #Pre condition
-    Given The user is on the login page
-
-    #when is representing action time
+#    Given The user is on the login page
     When The user enters student credentials
-
-    #Then is our verification part
     Then The user should be able to login
 
-    @Developer @smoke
-    Scenario: Login as Developer
-      Given The user is on the login page
-      When The user enters developer credentials
-      Then The user should be able to login
+  @Developer @smoke
+  Scenario: Login as Developer
+#    Given The user is on the login page
+    When The user enters developer credentials
+    Then The user should be able to login
+
 
                 #Scenario 1:
                 #Login as Teacher
