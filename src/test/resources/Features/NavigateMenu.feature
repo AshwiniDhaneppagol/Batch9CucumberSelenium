@@ -10,6 +10,7 @@ Feature: Navigate Menu
     And  The user navigates to Developer menu
     Then The user able to see developer title
 
+    @smoke
     Scenario: Navigate All Posts Menu
       Given The user is on the login page
       When  The user enters teacher credentials
@@ -17,6 +18,7 @@ Feature: Navigate Menu
       And   The user navigates to All Posts menu
       Then  The user able to see All Posts title
 
+      @smoke
       Scenario: Navigate My Account Menu
         Given The user is on the login page
         When The user enters teacher credentials

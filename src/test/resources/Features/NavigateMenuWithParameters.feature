@@ -16,7 +16,7 @@ Feature: Navigate to menu with parameters
 
 
 #    create a Scenario Outline covering the above 2 scenarios
-
+@smoke
   Scenario Outline: User navigate to each Menus
     And The user navigates to "<menuName>" menu
     Then The should be able to see header as "<header>"
