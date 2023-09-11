@@ -72,4 +72,11 @@ public class LoginStepDef {
         loginPage.login(username, password);
     }
 
+    @Then("The warning message contains {string}")
+    public void theWarningMessageContains(String expectedErrorMessage) {
+
+        String actualWarningMessage = loginPage.getWarningMessage(expectedErrorMessage);
+        System.out.println("actualWarningMessage = " + actualWarningMessage);
+        Assert.assertEquals(expectedErrorMessage,actualWarningMessage);
+    }
 }

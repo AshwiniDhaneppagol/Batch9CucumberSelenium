@@ -5,7 +5,7 @@ Feature: Navigate to menu with parameters
     When  The user logs in using "eurotech@gmail.com" and "Test12345!"
     Then The welcome message contains "Welcome Teacher"
 
-  @wip
+
   Scenario: User navigates to Developers Menu
     And The user navigates to "All Posts" menu
     Then The should be able to see header as "Posts"

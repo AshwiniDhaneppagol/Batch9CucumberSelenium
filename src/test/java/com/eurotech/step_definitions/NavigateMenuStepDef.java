@@ -54,7 +54,6 @@ public class NavigateMenuStepDef {
 
     @Then("The should be able to see header as {string}")
     public void theShouldBeAbleToSeeHeaderAs(String expectedHeader) {
-
         String actualHeader= dashboardPage.getHeader(expectedHeader);
         Assert.assertEquals(expectedHeader,actualHeader);
     }

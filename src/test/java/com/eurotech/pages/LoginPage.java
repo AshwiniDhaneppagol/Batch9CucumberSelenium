@@ -27,7 +27,7 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//a[contains(text(),'Forgot')]")
     public WebElement forgotPasswordBtn;
 
-    @FindBy(xpath = "//*[text()='Invalid Credentials!']")
+    @FindBy(xpath = "//*[contains(text(),'valid')]")
     public WebElement warningMessage;
 
 
@@ -76,5 +76,18 @@ public class LoginPage extends BasePage {
         usernameInput.sendKeys(ConfigurationReader.get("usernameDeveloper"));
         passwordInput.sendKeys(ConfigurationReader.get("passwordDeveloper"));
         loginBtn.click();
+    }
+
+    public String getWarningMessage(String expectedErrorMessage){
+        String actualMessage = null;
+        if(expectedErrorMessage.contains("@")){
+            actualMessage = usernameInput.getAttribute("validationMessage");
+        }else if (expectedErrorMessage.contains("characters")){
+            actualMessage = passwordInput.getAttribute("validationMessage");
+        }else {
+            actualMessage = warningMessage.getText();
+        }
+        return actualMessage;
+
     }
 }
