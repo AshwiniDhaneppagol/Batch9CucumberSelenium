@@ -11,13 +11,13 @@ Feature:  Eurotech Login Tests
     When The user enters teacher credentials
     Then The user should be able to login
 
-  @Student   @smoke @login
+  @Student   @login
   Scenario: Login As Student
 #    Given The user is on the login page
     When The user enters student credentials
     Then The user should be able to login
 
-  @Developer
+  @Developer @wip @test
   Scenario: Login as Developer
 #    Given The user is on the login page
     When The user enters developer credentials

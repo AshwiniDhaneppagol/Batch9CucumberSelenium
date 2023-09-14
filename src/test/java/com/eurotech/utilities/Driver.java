@@ -78,8 +78,6 @@ public class Driver {
                         e.printStackTrace();
                     }
 
-
-
             }
         }
         return driverPool.get();

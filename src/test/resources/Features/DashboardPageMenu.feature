@@ -1,5 +1,6 @@
 Feature: Dashboard menu page
 
+@smoke
   Scenario: user should be able to see Dashboard menu after login
     Given The user is on the login page
     When  The user logs in using "eurotech@gmail.com" and "Test12345!"
@@ -10,6 +11,7 @@ Feature: Dashboard menu page
       | My Account |
 
 
+  @wip @test
   Scenario: user should be able to see Dashboard menu after login
     Given The user is on the login page
 #    When  The user logs in using "eurotech@gmail.com" and "Test12345!"

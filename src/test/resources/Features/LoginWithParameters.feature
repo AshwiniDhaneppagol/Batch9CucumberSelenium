@@ -19,7 +19,7 @@ Feature: Login as different user
     When The user logs in using "umut@gmail.com" and "Test12345!"
     Then The user should be able to login
     Then The welcome message contains "Welcome umut"
-@smoke
+@wip
   Scenario: Login as student 1
     Given The user is on the login page
     When The user logs in using "berlin@gmail.com" and "berlin"
