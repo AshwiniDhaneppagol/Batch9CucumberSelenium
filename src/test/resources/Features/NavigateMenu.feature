@@ -17,7 +17,7 @@ Feature: Navigate Menu
       And   The user navigates to All Posts menu
       Then  The user able to see All Posts title
 
-@smoke
+@smoke @test
       Scenario: Navigate My Account Menu
         Given The user is on the login page
         When The user enters teacher credentials

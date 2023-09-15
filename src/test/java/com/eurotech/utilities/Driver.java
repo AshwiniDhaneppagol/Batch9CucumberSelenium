@@ -69,11 +69,11 @@ public class Driver {
                     break;
                 case "remote_chrome":
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.setCapability("platform", Platform.ANY);
+                 //   chromeOptions.setCapability("platform", Platform.ANY); if you are using selenium 3 jar file , use this line
 
                     try{
-                        driverPool.set(new RemoteWebDriver(new URL("http://52.203.177.139:4444/wd/hub"),chromeOptions));
-                        //driverPool.set(new RemoteWebDriver(new URL("http://44.204.47.230:4444/wd/hub"),chromeOptions));
+                      //  driverPool.set(new RemoteWebDriver(new URL("http://52.203.177.139:4444/wd/hub"),chromeOptions));
+                        driverPool.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chromeOptions));
                     }catch (MalformedURLException e){
                         e.printStackTrace();
                     }
