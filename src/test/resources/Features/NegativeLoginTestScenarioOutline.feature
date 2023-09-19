@@ -13,3 +13,5 @@ Feature: Negative Login Test
       | eurotech@@@        | 1                          | A part following '@' should not contain the symbol '@'.                                  |
       | eurotech@gmail.com | Tesfhdjkfhkjdshfkjdhkjshfk | Invalid Credentials!                                                                     |
       | euro@gmail         | Tesfhdjkfhkjdshfkjdhkjshfk | Please include a valid email!                                                            |
+
+

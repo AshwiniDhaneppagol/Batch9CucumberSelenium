@@ -11,6 +11,7 @@ Feature:  Eurotech Login Tests
     When The user enters teacher credentials
     Then The user should be able to login
 
+
   @Student   @smoke @login
   Scenario: Login As Student
 #    Given The user is on the login page

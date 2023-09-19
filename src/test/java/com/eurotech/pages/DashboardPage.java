@@ -52,4 +52,7 @@ public class DashboardPage extends BasePage {
     return Driver.get().findElement(By.xpath("//h1[text()='"+headerName+"']")).getText();
     }
 
+    public String getCompanyName(String name){
+        return Driver.get().findElement(By.xpath("//td[text()='"+name+"']")).getText();
+    }
 }
