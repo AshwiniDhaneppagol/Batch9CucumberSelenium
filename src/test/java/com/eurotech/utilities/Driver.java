@@ -1,6 +1,8 @@
 package com.eurotech.utilities;
 
 
+import io.appium.java_client.remote.MobileBrowserType;
+import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -75,6 +77,21 @@ public class Driver {
                       //  driverPool.set(new RemoteWebDriver(new URL("http://52.203.177.139:4444/wd/hub"),chromeOptions));
                         driverPool.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chromeOptions));
                     }catch (MalformedURLException e){
+                        e.printStackTrace();
+                    }
+                    break;
+
+                case "mobile_chrome":
+                    DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+                    desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,Platform.ANDROID);
+                    desiredCapabilities.setVersion("11.0");
+                    desiredCapabilities.setCapability("appium:deviceName","Pixel_2");
+                    desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME, MobileBrowserType.CHROME);
+
+
+                    try{
+                        driverPool.set(new RemoteWebDriver(new URL("http://localhost:4723/wd/hub"),desiredCapabilities));
+                    } catch (MalformedURLException e) {
                         e.printStackTrace();
                     }
 
